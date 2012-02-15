@@ -82,3 +82,11 @@ function formDisableFields2(){
 	});
 }
 		
+		
+		
+/**  aplicar esses conceitos mais tarde **/
+//loop de Array puro em javascript
+meuArray = new Array("item 1", "item 2", "item 3");
+for(i=0; i<meuArray.length; i++) {
+	meuArray[i] = "...";
+}
