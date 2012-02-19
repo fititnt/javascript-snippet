@@ -1,4 +1,4 @@
-'use strict';
+
 
 /**
  * Oculta elementos usando a propriedade display none de CSS
@@ -29,7 +29,7 @@ function setDysplayNone(elements){
  * Dependence: Mootool Array
  */
 function setDysplay(elements, evalue) {
-	Array.each(elements, function(value, key) {
+	Array.each(elements, function (value, key) {
 		document.id(value).style.display = evalue;
 	//console.log('setDysplayNone: escondido elemento ',value);
 	});
@@ -55,7 +55,7 @@ function setDysplay(elements, evalue) {
  */
 function setPreSuFix(elements, prefix, sufix) {
 	var newElements = [];
-	Array.each(elements, function(value, key) {
+	Array.each(elements, function (value, key) {
 		newElements.push(prefix + value + sufix);
 	});
 	//console.log('setPreSuFix: convertido de para', elements, newElements);
@@ -69,7 +69,7 @@ function setPreSuFix(elements, prefix, sufix) {
  * 
  */
 function formDisableFields(elements) {
-	Array.each(elements, function(value, key) {
+	Array.each(elements, function (value, key) {
 		document.id(value).disabled = true;
 	});
 }
@@ -79,15 +79,7 @@ function formDisableFields(elements) {
  * Dependence: Mootool Array
  */
 function formDisableFields2() {
-	$$('input,select,textarea').each(function(el) {
+	$$('input,select,textarea').each(function (el) {
 		el.disabled = true;
 	});
-}
-
-/**  aplicar esses conceitos mais tarde **/
-//loop de Array puro em javascript
-var meuArray = [];
-meuArray = ["item 1", "item 2", "item 3"];
-for (i=0; i<meuArray.length; i++) {
-	meuArray[i] = "...";
 }
