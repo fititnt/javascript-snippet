@@ -1,3 +1,5 @@
+'use strict';
+
 /**
  * Oculta elementos usando a propriedade display none de CSS
  * 
@@ -15,7 +17,7 @@
  * @return void Esconde os elementos
  */
 function setDysplayNone(elements){
-	Array.each(elements, function(value, key){
+	Array.each(elements, function (value, key) {
 		//console.log('setDysplayNone: escondido elemento ',value);
 		document.id(value).style.display = 'none';
 	});
@@ -26,8 +28,8 @@ function setDysplayNone(elements){
  * 
  * Dependence: Mootool Array
  */
-function setDysplay(elements, evalue){
-	Array.each(elements, function(value, key){
+function setDysplay(elements, evalue) {
+	Array.each(elements, function(value, key) {
 		document.id(value).style.display = evalue;
 	//console.log('setDysplayNone: escondido elemento ',value);
 	});
@@ -51,24 +53,24 @@ function setDysplay(elements, evalue){
  * @param string sufix
  * @return void Esconde os elementos
  */
-function setPreSuFix(elements, prefix, sufix){
+function setPreSuFix(elements, prefix, sufix) {
 	var newElements = [];
-	Array.each(elements, function(value, key){
-		newElements.push( prefix + value + sufix );
+	Array.each(elements, function(value, key) {
+		newElements.push(prefix + value + sufix);
 	});
 	//console.log('setPreSuFix: convertido de para', elements, newElements);
 	return newElements;
 }
-	
+
 /**
  * @todo documentar ou descartar (fititnt, 2012-02-12 21:31)
  * 
  * Dependence: Mootool Array
  * 
  */
-function formDisableFields(elements){
-	Array.each(elements, function(value, key){
-		document.id(value).disabled=true;
+function formDisableFields(elements) {
+	Array.each(elements, function(value, key) {
+		document.id(value).disabled = true;
 	});
 }
 /**
@@ -76,17 +78,16 @@ function formDisableFields(elements){
  * 
  * Dependence: Mootool Array
  */
-function formDisableFields2(){
+function formDisableFields2() {
 	$$('input,select,textarea').each(function(el) {
-		el.disabled=true;
+		el.disabled = true;
 	});
 }
-		
-		
-		
+
 /**  aplicar esses conceitos mais tarde **/
 //loop de Array puro em javascript
-meuArray = new Array("item 1", "item 2", "item 3");
-for(i=0; i<meuArray.length; i++) {
+var meuArray = [];
+meuArray = ["item 1", "item 2", "item 3"];
+for (i=0; i<meuArray.length; i++) {
 	meuArray[i] = "...";
 }
